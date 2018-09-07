@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin_app')
 
 @section('content')
 <div class="container">
@@ -11,7 +11,6 @@
         </ul>
     </div><br />
 @endif
-    <div class="row">
     <form method="post" action="{{action('TicketController@update', $id)}}" >
         {{csrf_field()}}
         <input name="_method" type="hidden" value="PATCH">
@@ -26,6 +25,5 @@
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
         </form>
-    </div>
 </div>
 @endsection
