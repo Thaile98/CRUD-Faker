@@ -1,5 +1,9 @@
 @extends('layouts.admin_app')
 
+@section('css')
+<link rel="stylesheet" href="{{asset('admin/simplemde/simplemde.min.css')}}">
+@endsection
+
 @section('content')
 <div class="container">
 @if ($errors->any())
@@ -21,9 +25,15 @@
         </div>
         <div class="form-group">
             <label for="description">Ticket Description:</label>
-            <textarea cols="5" rows="5" class="form-control" name="description">{{$ticket->description}}</textarea>
+            <textarea cols="5" rows="5" class="form-control" name="description" id="description">{{$ticket->description}}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
         </form>
 </div>
+@endsection
+@section('script')
+<script src="{{asset('admin/simplemde/simplemde.min.js')}}"></script>
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("description") });
+</script>
 @endsection

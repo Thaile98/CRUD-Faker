@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="{{asset('admin/assets/css/ready.css')}}">
     <link rel="stylesheet" href="{{asset('admin/assets/css/demo.css')}}">
+    @yield('css')
 </head>
 <body>
     <div class="wrapper">
@@ -257,7 +258,7 @@
 <script src="{{asset('admin/assets/js/core/popper.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/core/bootstrap.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/plugin/chartist/chartist.min.js')}}"></script>
-<script src="{{asset('admin/assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js')}}"></script>
+<!-- <script src="{{asset('admin/assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js')}}"></script> -->
 <script src="{{asset('admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/plugin/jquery-mapael/jquery.mapael.min.js')}}"></script>
@@ -266,4 +267,6 @@
 <script src="{{asset('admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/ready.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/demo.js')}}"></script>
+
+@yield('script')
 </html>
